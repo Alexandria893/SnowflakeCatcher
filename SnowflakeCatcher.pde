@@ -33,7 +33,15 @@ boolean isMoving;
     }
     void lookDown()
     {
-      //your code here
+      if (0<=y && y<=500)
+      {
+
+        isMoving = false;
+
+      }
+      else 
+        isMoving = true;
+      
     }
     void erase()
     {
