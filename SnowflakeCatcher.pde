@@ -33,7 +33,7 @@ boolean isMoving;
     }
     void lookDown()
     {
-      if (0<=y && y<=500)
+      if (0<=myY && myY<=500)
       {
 
         isMoving = false;
@@ -63,7 +63,16 @@ boolean isMoving;
     }
     void wrap()
     {
-      //your code here
+
+      if (myY == 500)
+      {
+
+        myY = 0;
+        myX = (int)(Math.random()*500);
+
+
+      }  
+
     }
 }
 
