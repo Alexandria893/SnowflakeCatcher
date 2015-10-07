@@ -4,17 +4,19 @@ void setup()
 {
 
   size(500,500);
-  snow = new Snowflake[5];
+  snow = new Snowflake[10];
     for (int i = 0; i<snow.length; i++)
     {
 
       snow[i] = new Snowflake();
 
     }
+    background(127,127,127);
 }
 
 void draw()
 {
+    
     for (int i = 0; i<snow.length; i++)
     
     {
@@ -31,7 +33,7 @@ void draw()
 void mouseDragged()
 {
 
-  fill(255,0,0);
+  fill(0,255,0);
   ellipse(mouseX,mouseY,50,50);
 
 }
@@ -57,19 +59,21 @@ boolean isMoving;
     //shows snow
     void show()
     {
-
+      noStroke();
       fill(255);
-      ellipse(myX,myY,5,5);
+      ellipse(myX,myY,20,20);
 
     }
 
     //checks if y is at the bottom or top of screen
     void lookDown()
     {
-      if (0<=myY && myY<=500)
+
+      if (0<=myY && myY<=500 && get(myX, myY+=12)!= color(127,127,127))
       {
 
         isMoving = false;
+        System.out.println(isMoving);
 
       }
       else 
@@ -77,12 +81,13 @@ boolean isMoving;
         isMoving = true;
       
     }
+
     void erase()
     {
 
-      background(127);
-      fill(0,0,0);
-      ellipse(myX,myY,7,7);
+      noStroke();
+      fill(127);
+      ellipse(myX,myY,22,22);
 
     }
     void move()
@@ -91,7 +96,7 @@ boolean isMoving;
       if (isMoving == true)
       {
 
-        myY++;
+       // myY++;
 
       }
 
