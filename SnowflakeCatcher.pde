@@ -5,7 +5,7 @@ void setup()
 {
 
   size(500,500);
-  snow = new Snowflake[100];
+  snow = new Snowflake[200];
     for (int i = 0; i<snow.length; i++)
     
     {
@@ -40,7 +40,7 @@ void mouseDragged()
 {
 
   fill(255,0,0);
-  ellipse(mouseX,mouseY,50,50);
+  ellipse(mouseX,mouseY,10,10);
   fill(127);
 
 }
@@ -60,7 +60,7 @@ boolean isMoving;
   Snowflake()
   {
 
-  snowSize = (int)(Math.random()*17);  
+  snowSize = (int)(Math.random()*7);  
   myX = (int)(Math.random()*500);
   myY = (int)(Math.random()*500);
   isMoving = true;
@@ -115,7 +115,7 @@ boolean isMoving;
       {
 
         myY++;
-
+      
       }
 
     }
@@ -136,7 +136,7 @@ boolean isMoving;
 
     }
 
-    /*void keyPressed()
+   /* void keyPressed()
    
     {
 
