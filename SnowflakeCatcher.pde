@@ -40,7 +40,7 @@ void mouseDragged()
 {
 
   fill(255,0,0);
-  ellipse(mouseX,mouseY,10,10);
+  ellipse(mouseX,mouseY,20,20);
   fill(127);
 
 }
@@ -136,21 +136,19 @@ boolean isMoving;
 
     }
 
-   /* void keyPressed()
+}
+
+
+void keyPressed()
    
     {
 
-      if (key ==SHIFT) 
+      if (keyPressed == true) 
 
       {
 
         background(0);
-        System.println("work");
 
       }  
 
-    }*/
-
-}
-
-
+    }
